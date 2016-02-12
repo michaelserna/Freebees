@@ -15,7 +15,10 @@ var app = angular.module('myApp', ['map.services'])
   $scope.initMap = function(){
     Map.initMap()
   }
-  $scope.initMap()
+  $(document).ready(function() {
+    $scope.initMap()
+  })
+  
 })
 .factory('Posts', function($http){
   var sendPost = function(){
